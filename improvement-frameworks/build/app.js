@@ -223,8 +223,9 @@ const W=(e,t)=>`${e}--${t}`;let z=!0;void 0===window.ShadyCSS?z=!1:void 0===wind
         background-color: #17181c;
 
         /* menu */
-        --menu-bg: #aaa;
+        --menu-bg: #222;
         --menu-nav-bg: #17181cbb;
+        --menu-color-text: white;
 
         /* tab */
         --tab-color: #17181c;
@@ -254,8 +255,8 @@ const W=(e,t)=>`${e}--${t}`;let z=!0;void 0===window.ShadyCSS?z=!1:void 0===wind
 			.header {
 				width: 100%;
 				text-align: center;
+				align-items: center;
 				display: flex;
-    			align-items: center;
 				color: white;
 
 				flex: 1;
