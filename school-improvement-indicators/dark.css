@@ -1,0 +1,85 @@
+html {
+	background-color: #17181c !important;
+}
+
+html,
+body,
+input,
+textarea,
+select,
+button {
+	background-color: #17181c;
+}
+
+html,
+body,
+input,
+textarea,
+select,
+button {
+	border-color: #575757;
+	color: #e8e7e3;
+}
+
+a {
+	color: #3391ff;
+}
+
+table {
+	border-color: #4c4c4c;
+}
+
+::placeholder {
+	color: #b9b4ac;
+}
+
+::selection {
+	background-color: #005ccc;
+	color: #ffffff;
+}
+
+::-moz-selection {
+	background-color: #005ccc;
+	color: #ffffff;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	background-color: #545b00 !important;
+	color: #e8e7e3 !important;
+}
+
+:root {
+	--menu-color-selected: rgb(213, 210, 205);
+	--menu-bg: rgb(27, 29, 34);
+	--menu-bg-selected: rgba(0, 112, 192, 0.8);
+	--menu-color-text: rgb(213, 210, 205);
+	--menu-header: rgba(27, 29, 34, 0.5);
+}
+.header-section {
+	background-color: #333;
+}
+.header-section:hover {
+	color: white;
+	background-color: #222;
+}
+.tab-header {
+	background-color: rgb(23, 24, 28);
+}
+.tab-selected {
+	background-color: rgb(23, 24, 28);
+	border-bottom: 1px solid rgb(23, 24, 28);
+}
+.link-list {
+	list-style-image: url("link-white.svg");
+}
+h2 {
+	color: #e8e7e3;
+}
+.anchor-text {
+	color: #e8e7e3;
+}
+#howToUseDocumentId {
+	background-color: rgba(255, 255, 255, 0.8);
+}

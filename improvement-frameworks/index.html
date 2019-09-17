@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<!-- Load polyfills -->
+	<script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js">
+	</script>
+
+	<script type="text/javascript">
+		if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+		//   document.write('<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"><\/script>');
+		//   document.write('<script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"><\/script>');
+		//   document.write('<script src="./node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"><\/script>');
+		//   document.write('<script src="./build-ie/app.js"><\/script>');
+			document.write("Internet Explorer is not currently supported - Please open in another browser.");
+		} else {
+			document.write('<script type="module" src="./build/app.js"><\/script>');
+		}
+	  </script>
+
+	<!-- Load components via WebComponents.waitFor -->
+	<script type="module">
+		window.WebComponents = window.WebComponents || {
+			waitFor(cb) { addEventListener('WebComponentsReady', cb) }
+		}
+	</script>
+
+	<!-- App specific content-->
+	<meta name="description" content="Framework Document">
+	<title>Framework Document</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="manifest" href="./manifest.json">
+	<link rel="shortcut icon" href="./manifest/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+
+	<style>
+		/* remove unneeded spacing */
+		html, body, main-element {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+</head>
+
+<body>
+	<main-element>
+		<!-- Placeholders to improve time to first paint -->
+
+		<!-- Check for JavaScript -->
+		<p id="jsyes"></p>
+		<script type="text/javascript">
+			document.getElementById('jsyes').innerHTML = '';
+
+			window.addEventListener('hashchange', function () {
+				if (!document) {
+					throw new Error("Document is null");
+				}
+				let mainEl = document
+					.querySelector('main-element');
+				mainEl.scrollToMe(location.hash);
+
+			}, false);
+		</script>
+		<noscript>
+			Could not render the page. Check that JavaScript is
+			enabled.
+		</noscript>
+
+	</main-element>
+</body>
